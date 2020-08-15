@@ -1,9 +1,8 @@
 <template>
   <nav id="nav">
-    <p class="logo">SVT</p>
     <ul class="nav-links">
       <li class="links">
-        <router-link to="/">Home</router-link>
+        <router-link to="/">STV</router-link>
       </li>
       <li v-for="portfolio in portfolios" :key="portfolio.name" class="links">
         <router-link
@@ -22,7 +21,6 @@ import store from "@/store";
 export default {
   data() {
     return {
-      portfolioName: this.$route.params.name,
       portfolios: store.portfolios
     };
   }
