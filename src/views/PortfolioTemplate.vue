@@ -9,15 +9,17 @@
 import store from "@/store.js";
 export default {
   data() {
-    return {
-      portfolioSlug: this.$route.params.slug
-    };
+    return {};
+  },
+  props: {
+    slug: {
+      type: String,
+      required: true
+    }
   },
   computed: {
     portfolio() {
-      return store.portfolios.find(
-        portfolio => portfolio.slug === this.portfolioSlug
-      );
+      return store.portfolios.find(portfolio => portfolio.slug === this.slug);
     }
   }
 };

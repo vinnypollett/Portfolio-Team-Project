@@ -9,11 +9,13 @@ const routes = [
     path: "/",
     name: "Home",
     component: Home,
+    props: true,
   },
   {
     path: "/portfolio/:slug",
     name: "PortfolioTemplate",
     component: () => import("../views/PortfolioTemplate"),
+    props: true,
   },
 ];
 
