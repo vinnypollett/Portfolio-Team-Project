@@ -1,9 +1,7 @@
 <template>
   <nav id="nav">
+    <router-link to="/">STV</router-link>
     <ul class="nav-links">
-      <li class="links">
-        <router-link to="/">STV</router-link>
-      </li>
       <li v-for="portfolio in portfolios" :key="portfolio.name" class="links">
         <router-link
           :to="{
@@ -27,5 +25,14 @@ export default {
 };
 </script>
 
-<style>
+<style scope>
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+ul {
+  width: 500px;
+  display: flex;
+  justify-content: space-between;
+}
 </style>
