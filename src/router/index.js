@@ -17,6 +17,12 @@ const routes = [
     component: () => import("../views/PortfolioTemplate"),
     props: true,
   },
+  {
+    path: "/:slug/:projectSlug",
+    name: "ProjectTemplate",
+    component: () => import("../views/ProjectTemplate"),
+    props: true,
+  },
 ];
 
 const router = new VueRouter({

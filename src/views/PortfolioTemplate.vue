@@ -5,9 +5,15 @@
     </section>
     <section>
       <div class="cards">
-        <div class="card"></div>
         <div v-for="project in portfolio.projects" :key="project.slug" class="card">
-          <p>{{project.name}}</p>
+          <router-link
+            :to="{
+              name: `ProjectTemplate`,
+              params:{projectSlug: project.slug}
+          }"
+          >
+            <p>{{project.name}}</p>
+          </router-link>
         </div>
       </div>
     </section>
@@ -40,6 +46,7 @@ export default {
   width: 100px;
   margin: 10px;
   background-color: aquamarine;
+  cursor: pointer;
 }
 </style>
 
