@@ -3,7 +3,6 @@
     <section>
       <h1>{{portfolio.name}}'s project</h1>
       <h1>{{projectSlug}}</h1>
-      <!-- <h3>{{project.detail}}</h3> -->
     </section>
   </div>
 </template>
